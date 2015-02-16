@@ -7,7 +7,7 @@
 	<meta property="og:image" content="route.png" />
 	<link rel="stylesheet" href="lib/leaflet/leaflet.css" />
 	<link rel="stylesheet" href="lib/cluster/MarkerCluster.css" />	
-	<link rel="stylesheet" href="js/Leaflet.Photo/Leaflet.Photo.css" />	
+	<link rel="stylesheet" href="js/Leaflet.Photo/leaflet_photo.css" />	
 	<link rel="stylesheet" href="css/map.css" />
 </head>
 <body>
@@ -15,7 +15,7 @@
 	<script src="lib/reqwest.min.js"></script>
 	<script src="lib/leaflet/leaflet.js"></script>
 	<script src="lib/cluster/leaflet.markercluster.js"></script>	
-	<script src="js/Leaflet.Photo/Leaflet.Photo.js"></script>	
+	<script src="js/Leaflet.Photo/leaflet_photo.js"></script>	
 	<script>
 
 	var map = L.map('map', {
@@ -26,7 +26,7 @@
 		attribution: 'Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
 	}).addTo(map);
 
-	var photoLayer = L.photo.cluster({ disableClusteringAtZoom: 19 }).on('click', function (evt) {
+	var photoLayer = L.photo.cluster({ disableClusteringAtZoom: 20 }).on('click', function (evt) {
 		var photo = evt.layer.photo,
 			template = '<img src="{url}"/></a><p>{caption}</p>';
 
